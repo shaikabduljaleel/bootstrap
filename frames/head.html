@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        td{
+            border-collapse: collapse;
+        }
+    </style>
+</head>
+<body>
+    <table border="1" cellspacing="3" cellpadding="5" width="100%">
+        <tr>
+            <td height="30" width="30">
+                Logo
+            </td>
+            <td colspan="4" align="center">
+               <b>Website name</b> 
+            </td>
+        </tr>
+        <tr>
+            <td align="center">
+                <a href="">Home</a>
+            </td>
+            <td align="center">
+                <a href="login.html">Login</a>
+            </td>
+            <td align="center">
+                <a href="Register.html">Registration</a>
+            </td>
+            <td align="center">
+                <a href="">Catalouge</a>
+            </td>
+        </tr>
+    </table>
+    <h1 id="demo">This is heading</h1>
+    <button id="btn">Click me to change the styles</button>
+    <button id="rbtn">Click me to Remove the changes</button>
+</body>
+<script>
+    let demoEl=document.getElementById('demo');
+    let btnEl=document.getElementById('btn');
+    btnEl.onclick=()=>{
+        demoEl.style.fontSize='40px'
+        demoEl.style.color='Red'
+    }
+    let rbtnEl=document.getElementById('rbtn')
+    rbtnEl.onclick=()=>{
+        
+    }
+</script>
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            display: flex;
+            align-items: center;
+            justify-content: start;
+            flex-direction: column;
+            border: 2px solid black;
+            height: 90vh;
+            margin: 10px;   
+        }
+        .container{
+            margin: 10px;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+        }
+        input{
+            border: 1px solid silver;
+            border-radius: 3px;
+            width: 60%;
+            height: 20px;
+            padding: 4px;
+            margin-bottom: 5px;
+        }
+        label{
+            color:rgb(122, 121, 121);
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <h1>Form Validation</h1>
+    <div class="container">
+        <div>
+            <label for="FirstName">First Name:</label>
+        <input type="text" name="FirstName" placeholder="Enter Your First Name" id="FirstName"/><br>
+        </div>
+        <div>
+            <label for="LastName">Last Name:</label>
+        <input type="text" name="LastName" placeholder="Enter Your Last Name" id="LastName"/><br>
+        </div>
+        <div>
+            <label for="email">Email:</label>
+        <input type="email" name="Email" placeholder="Enter Email Id" id="email"/><br>
+        </div>
+        <button type="submit" id="submitEl">Submit</button>
+    </div>
+</body>
+<script>
+    let FirstNameEl=document.getElementById("FirstName");
+    let submitEl=document.getElementById('submitEl');
+    let LastNameEl=document.getElementById('LastName');
+    let emailEl=document.getElementById('email')
+    //  submitEl.addEventListener('click',()=>{
+    //     if(FirstNameEl.value==='' || LastNameEl.value==='' || emailEl.value===''){
+    //         alert('Enter details');
+    //     }
+    //     if(!emailEl.value.includes('@') || (!emailEl.value.includes('.com'))){
+    //         alert('Enter a correct email Address')
+    //     }
+    // });
+    submitEl.addEventListener('mouseover',function(){
+        console.log("Mouse Entered");
+        submitEl.style.backgroundColor='Red'
+        submitEl.style.padding='10px'
+
+    })
+    submitEl.addEventListener('mouseout',()=>{
+        console.log('Mouse removed');
+        submitEl.style.backgroundColor=''
+        submitEl.style.padding='0px'
+    })
+    submitEl.addEventListener(('dblclick'),function(){
+        console.log('Clicked Two times');
+    })
+    FirstNameEl.addEventListener(('blur'),function(){
+        console.log('blured');
+    })
+    FirstNameEl.addEventListener(('change'),function(){
+        console.log('changed');
+    })
+    FirstNameEl.addEventListener(('mouseover'),function(){
+        console.log('Mouse Entered');
+    })
+    
+</script>
+</html>

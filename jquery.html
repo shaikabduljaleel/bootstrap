@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <style>
+        .box-container {
+            width: 200px;
+            height: 200px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: flex-start;
+            margin-top: 20px;
+        }
+
+        .box {
+            width: 50px;
+            height: 50px;
+            margin-bottom: 10px;
+        }
+
+        .box-red {
+            background-color: red;
+        }
+
+        .box-blue {
+            background-color: blue;
+        }
+
+        .box-lavender {
+            background-color: crimson;
+        }
+
+        img{
+            height: 300px;
+            width: 300px;
+        }
+    </style>
+    <script>
+        $(document).ready(() => {
+            $("#btn").mouseenter(() => {
+                $("#div1").fadeToggle()
+                $("#div2").fadeToggle(1500)
+                $("#div3").fadeToggle(1000)
+                //$("button").hide()
+            })
+            $("button").mouseenter(() => {
+                $("img").slideToggle()
+                $('#btn2').fadeToggle(2000)
+            })
+        })
+    </script>
+</head>
+
+<body>
+    <!--<button id="btn">Click to Fade Toggle</button>
+     <div class="box-container">
+        <div class="box box-red" id="div1"></div>
+        <div class="box box-blue" id="div2"></div>
+        <div class="box box-lavender" id="div3"></div>
+    </div> -->
+    <p>helloo</p>
+    <button id="btn2">Hello World</button>
+    <img src="Cybersecurity.jpeg"/>
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT0laVIc9IBDdvK-b0YsbsaJReUImtXlbbmVch2Jl0jug&s"/>
+    
+
+</body>
+
+</html>
